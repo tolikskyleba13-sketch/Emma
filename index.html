@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b0b0b;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 25px;
+}
+
+main {
+  max-width: 350px;
+  animation: appear .7s ease;
+}
+
+h1 {
+  font-size: 27px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+button {
+  margin-top: 30px;
+  padding: 13px 35px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+<main>
+  <h1 id="text">я думав з часом стане легше</h1>
+  <button id="btn" onclick="next()">далі</button>
+</main>
+
+<script>
+let step = 0;
+
+function next() {
+  if (step === 0) {
+    document.getElementById("text").textContent =
+      "але чомусь думки постійно повертаються до одного й того самого";
+
+    document.getElementById("btn").textContent = "...";
+    step = 1;
+  } else {
+    window.open(
+      "https://vt.tiktok.com/ZSgFjE5rA/",
+      "_blank"
+    );
+  }
+}
+</script>
+</body>
+</html>
